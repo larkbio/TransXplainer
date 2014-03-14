@@ -1,0 +1,28 @@
+
+<div >
+    <div id="col1">
+        <h2><%= @result[:sim_gene_name] %><span class="type_mmuprot">MMUPROT</span></h2>
+        <% if not @result[:description].nil? %>
+            <h3><%= @result[:description].capitalize %></h3>
+        <% end %>
+        <% if not @result[:entrez_id].nil? %>
+            <span>Entrez ID: <%= @result[:entrez_id] %> (<a href=<%="http://www.ncbi.nlm.nih.gov/gene/?term=#{@result[:entrez_id]}"%>>NCBI</a>)<br/></span>
+        <% end %>
+        <span>Ensembl protein ID: <%= @result[:ensp_id] %></span><br/>
+        <span>Assembled transcript id: <%= @result[:cufflinks_isoform_id] %></span><br/>
+        <span>Protein length: <%= @result[:prot_len] %></span><br/>
+    </div>
+
+    <div id="col2">
+        <%= image_tag url_for(:controller => "generated_result", :action => "show", :id =>@result[:expr_result_id]), alt: "Generating image..." %>
+
+    </div>
+</div>
+<div id="col_sep">
+</div>
+<div>
+    <!--<%= render partial: "transcripts_section" %>-->
+</div>
+<div>
+    <%= render partial: "similarities_section" %>
+</div>

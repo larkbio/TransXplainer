@@ -1,0 +1,24 @@
+<div class="bodyContainer">
+
+    <header id="home-header">
+    </header>
+
+    <section id="home-search-section">
+        <div class="container">
+            <div class="search-container">
+                <%= form_tag( results_index_path, :method => 'get') do %>
+                        <%= text_field_tag 'home-search-string', nil, :class => 'search-string greyed-out-text' %>
+                        <%= button_tag "", :name => nil, :class => 'search-button search-icon', :id => 'home-search-button' %>
+                <% end %>
+            </div>
+            <!--<div id="search-examples-container">-->
+                <!--<p>-->
+                    <!--e.g.<br/>-->
+                    <!--POFUT1, fucosyltransferase, Ctsa, Samd9l<br/>-->
+                    <!--XLOC_005366, TCONS_00013379<br/>-->
+                    <!--glycosylation, ribosomal<br/>-->
+                <!--</p>-->
+            <!--</div>-->
+        </div>
+    </section>
+</div>

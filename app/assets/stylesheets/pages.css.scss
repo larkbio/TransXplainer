@@ -1,0 +1,80 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'reset';
+
+.bodyContainer {
+  width: 1140px;
+  margin: 0px auto;
+  background-color: #fff;
+}
+
+#home-search-section {
+  width: 1140px;
+  height: 550px;
+  margin: 0px auto;
+  padding: 0px;
+  text-align: center;
+//  font-family: ITC Lubalin Graph New, Helvetica neue, Arial, sans-serif !important;
+  border-collapse: collapse;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  position: relative;
+  clear: both;
+}
+
+#home-search-section .container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 440px;
+  margin: auto;
+  height: 90px;
+  z-index: 100;
+}
+
+#home-search-section .container .search-container {
+  overflow: auto;
+}
+
+#home-search-section .container .search-container .search-string {
+  padding: 15px;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 384px;
+  height: 60px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px 0 1px 1px;
+  background-color: #fff;
+  font-family: "Open Sans", Helvetica neue, Arial, sans-serif;
+  font-size: 1.5000em;
+  color: black;
+}
+
+
+#home-search-section .container .search-container .search-button {
+  vertical-align: top;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  display: block;
+  float: left;
+  border: none;
+  margin: 0 0 0 -4px;
+  outline: none;
+  color: #fff;
+}
+
+.search-icon {
+  background: #bb0df2 url("search_white.png") no-repeat center center;
+}
+
+.greyed-out-text {
+  color: lightgray !important;
+}
